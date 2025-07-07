@@ -1,5 +1,5 @@
 import React from "react";
-import "../css/pages/main.css";
+import "../component/Navbar.css";
 import { ReactComponent as Logo } from "../assets/img/logo.svg";
 import { useNavigate } from "react-router-dom";
 
@@ -31,7 +31,7 @@ const Navbar = () => {
             navigate("/profile");
           }}
         >
-          선배소개
+          프로필
         </li>
         <li
           className="navbar-item"
