@@ -4,6 +4,7 @@ import { Route, BrowserRouter, Routes, useLocation } from "react-router-dom";
 import MainPage from "./pages/main";
 import Navbar from "./component/Navbar";
 import SignUp from "./pages/signup";
+import ProfilePage from "./pages/profile";
 
 const navbarPaths = ["/", "/profile", "/schedule"];
 
@@ -20,7 +21,7 @@ function AppRoutes() {
 
         {/* 아래는 예시용, 실제 페이지 컴포넌트가 있으면 교체 */}
 
-        <Route path="/profile" element={<div>선배소개 페이지</div>} />
+        <Route path="/profile" element={<ProfilePage />} />
         <Route path="/schedule" element={<div>일정 페이지</div>} />
       </Routes>
     </>
