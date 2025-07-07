@@ -1,0 +1,99 @@
+.profile-bg {
+  min-height: 100vh;
+  background: #000;
+  color: #fff;
+  padding: 0;
+}
+
+.crews-title {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  padding: 5vh 0;
+  margin: 0;
+  letter-spacing: 2px;
+  background-color: #000;
+}
+
+.crew-list {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  flex-wrap: wrap;
+  padding: 0 32px;
+}
+
+.crew-card {
+  background: transparent;
+  border: 2px solid #ccc;
+  border-radius: 16px;
+  width: 340px;
+  min-height: 160px;
+  padding: 28px 24px 18px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  font-size: 1.1rem;
+  box-sizing: border-box;
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+.crew-card:hover {
+  border-color: #03ff2e;
+  box-shadow: 0 4px 24px 0 #03ff2e22;
+}
+
+.crew-card-header {
+  display: flex;
+  align-items: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.crew-icon {
+  color: #03ff2e;
+  font-size: 1.5rem;
+  margin-right: 10px;
+}
+
+.crew-name {
+  font-size: 1.2rem;
+}
+
+.crew-intro {
+  margin-bottom: 0;
+  color: #fff;
+}
+
+.crew-more-toggle {
+  color: #ccc;
+  font-size: 0.95rem;
+  cursor: pointer;
+  margin-bottom: 0;
+  user-select: none;
+  transition: color 0.2s;
+}
+.crew-more-toggle:hover {
+  color: #03ff2e;
+}
+
+.crew-more-content {
+  margin: 12px 0;
+  color: #eee;
+  font-size: 0.98rem;
+  line-height: 1.5;
+  animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
