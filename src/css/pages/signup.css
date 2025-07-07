@@ -1,0 +1,76 @@
+.account-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.account-title {
+  margin-top: 5vh;
+  margin-bottom: 0;
+}
+
+.account-subtitle {
+  margin-bottom: 5vh;
+  color: #333;
+}
+
+.account-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+}
+
+.account-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40vw;
+}
+
+.email-container {
+  display: flex;
+  flex-direction: row;
+  height: 4vh;
+  width: 40vw;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  margin-bottom: 3vh;
+}
+
+.email-input {
+  width: 80%;
+  border: none;
+}
+
+.email-button {
+  width: 20%;
+  background-color: #f0f0f0;
+  color: #000;
+  border: none;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  height: 4vh;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  margin-bottom: 3vh;
+}
+
+.account-submit {
+  width: 20vw;
+  height: 5vh;
+  background-color: #03ff2e;
+  color: #333;
+  border: none;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
