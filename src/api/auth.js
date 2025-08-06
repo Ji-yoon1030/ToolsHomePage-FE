@@ -67,3 +67,23 @@ export async function verifyEmailCode({ email, code }) {
 
   return data;
 }
+
+// 로그인 API
+export async function login({ studentId, password }) {
+  const response = await fetch("http://10.50.46.255:8080/tools/login", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ studentId, password }),
+  });
+
+  const data = await response.json();
+
+  if (!response.ok) {
+    throw new Error(data.message || "로그인 실패");
+  }
+
+  return data; 
+}
+
