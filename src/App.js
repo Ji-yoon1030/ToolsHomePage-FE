@@ -4,6 +4,7 @@ import { Route, BrowserRouter, Routes, useLocation } from "react-router-dom";
 import MainPage from "./pages/main";
 import Navbar from "./component/Navbar";
 import SignUp from "./pages/signup";
+import Login from "./pages/login";
 import ProfilePage from "./pages/profile";
 import NotificationBoard from "./pages/notification";
 
@@ -18,7 +19,7 @@ function AppRoutes() {
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/signup" element={<SignUp />} />
-        {/* <Route path="/login" element={<SignUp />} /> */}
+        <Route path="/login" element={<Login />} />
 
         {/* 아래는 예시용, 실제 페이지 컴포넌트가 있으면 교체 */}
 

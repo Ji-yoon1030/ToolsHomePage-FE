@@ -2,7 +2,7 @@
 export async function sendEmailVerificationCode(email) {
   try {
     const response = await fetch(
-      `http://10.50.46.255:8080/tools/auth/email/verify?email=${encodeURIComponent(
+      `http://10.50.47.255:8080/tools/auth/email/verify?email=${encodeURIComponent(
         email
       )}`,
       {
@@ -29,7 +29,7 @@ export async function sendEmailVerificationCode(email) {
 // 2. 회원가입 API (변경 없음)
 export async function signup({ studentId, name, email, password }) {
   const response = await fetch(
-    "http://10.50.46.255:8080/tools/members/signup",
+    "http://10.50.47.255:8080/tools/members/signup",
     {
       method: "POST",
       headers: {
@@ -50,7 +50,7 @@ export async function signup({ studentId, name, email, password }) {
 // 3. 인증번호 확인 API (변경 없음)
 export async function verifyEmailCode({ email, code }) {
   const response = await fetch(
-    "http://10.50.46.255:8080/tools/auth/email/confirm",
+    "http://10.50.47.255:8080/tools/auth/email/confirm",
     {
       method: "POST",
       headers: {
@@ -70,7 +70,7 @@ export async function verifyEmailCode({ email, code }) {
 
 // 로그인 API
 export async function login({ studentId, password }) {
-  const response = await fetch("http://10.50.46.255:8080/tools/login", {
+  const response = await fetch("http://10.50.46.222:8080/tools/auth/login", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -84,6 +84,5 @@ export async function login({ studentId, password }) {
     throw new Error(data.message || "로그인 실패");
   }
 
-  return data; 
+  return data;
 }
-
