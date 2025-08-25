@@ -83,3 +83,17 @@ export async function login({ studentId, password }) {
 
   return data;
 }
+
+export async function me() {
+  const token = localStorage.getItem("token");
+  if (!token) throw new Error("No token");
+  const response = await fetch("/api/auth/me", {
+    headers: { Authorization: `Bearer ${token}` },
+  });
+  if (!response.ok) throw new Error("Unauthorized");
+  return response.json();
+}
+
+export function logout() {
+  localStorage.removeItem("token");
+}
