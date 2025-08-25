@@ -1,24 +1,21 @@
-// Main.js
+// src/pages/main.js
 import React from "react";
+import { Carousel } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
+
+import logoTools from "../assets/img/logo-tools.png";
+import logoActivity from "../assets/img/logo-activity.png";
+import activity2 from "../assets/img/activity2.png";
+import activity3 from "../assets/img/activity3.png";
+
 import "../css/pages/main.css";
 
 const MainPage = () => {
   return (
     <div className="main-bg">
       <div className="main-container">
-        {/* 로고 (상단 좌측)
-      {<img src="/logo-tools.png" alt="로고" className="logo-small" />}
-
-      <nav className="navbar">
-        <div className="nav-item">홈</div>
-        <div className="nav-item">선배 소개</div>
-        <div className="nav-item">일정</div>
-        <div className="nav-item">로그인</div>
-        <div className="nav-item">회원가입</div>
-      </nav> */}
-
         {/* 중앙 큰 로고 */}
-        {<img src="/logo-tools.png" alt="툴스로고" className="logo-main" />}
+        <img src={logoTools} alt="툴스로고" className="logo-main" />
         <div className="subtitle">Total Object Oriented Language Study</div>
 
         <div className="activity-box">
@@ -56,12 +53,32 @@ const MainPage = () => {
           </div>
         </div>
 
-        {/* 활동 사진 */}
-        {<img src="/activity.png" alt="활동사진" className="activity-photo" />}
-
-        {/* 화살표 */}
-        <div className="arrow left-arrow">◀</div>
-        <div className="arrow right-arrow">▶</div>
+        {/* 활동 사진 Carousel (수동 넘김) */}
+        <div className="activity-carousel">
+          <Carousel interval={null}>
+            <Carousel.Item>
+              <img
+                className="d-block w-100 activity-photo"
+                src={logoActivity}
+                alt="활동사진 1"
+              />
+            </Carousel.Item>
+            <Carousel.Item>
+              <img
+                className="d-block w-100 activity-photo"
+                src={activity2}
+                alt="활동사진 2"
+              />
+            </Carousel.Item>
+            <Carousel.Item>
+              <img
+                className="d-block w-100 activity-photo"
+                src={activity3}
+                alt="활동사진 3"
+              />
+            </Carousel.Item>
+          </Carousel>
+        </div>
 
         {/* 하단 인포 */}
         <div className="footer">
