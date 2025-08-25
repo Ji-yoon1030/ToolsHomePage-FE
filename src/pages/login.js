@@ -6,6 +6,7 @@ function Login() {
   const [studentId, setStudentId] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
+  const navigate = useNavigate(); // ✅ 추가
 
   const handleLogin = async () => {
     if (!studentId || !password) {
@@ -16,6 +17,7 @@ function Login() {
     setLoading(true);
     try {
       const result = await login({ studentId, password });
+      navigate("/");
       alert("로그인 성공!");
       //   console.log("서버 응답:", result);
       // TODO: 로그인 성공 후 처리
