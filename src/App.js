@@ -8,6 +8,15 @@ import Login from "./pages/login";
 import ProfilePage from "./pages/profile";
 import NotificationBoard from "./pages/notification";
 
+import AdminLayout from "./pages/admin/AdminLayout";
+import GuardedRoute from "./pages/admin/_components/GuardedRoute";
+import Dashboard from "./pages/admin/Dashboard";
+import HomeManager from "./pages/admin/HomeManager";
+import MembersList from "./pages/admin/MembersList";
+import Approvals from "./pages/admin/Approvals";
+import PostsList from "./pages/admin/PostsList";
+import PostEditor from "./pages/admin/PostEditor";
+
 const navbarPaths = ["/", "/profile", "/schedule"];
 
 function AppRoutes() {
@@ -25,6 +34,18 @@ function AppRoutes() {
 
         <Route path="/profile" element={<ProfilePage />} />
         <Route path="/schedule" element={<NotificationBoard />} />
+
+        <Route path="/admin" element={<GuardedRoute />}>
+          <Route element={<AdminLayout />}>
+            <Route path="dashboard" element={<Dashboard />} />
+            <Route path="home" element={<HomeManager />} />
+            <Route path="members" element={<MembersList />} />
+            <Route path="members/approvals" element={<Approvals />} />
+            <Route path="posts" element={<PostsList />} />
+            <Route path="posts/new" element={<PostEditor mode="new" />} />
+            <Route path="posts/:id/edit" element={<PostEditor mode="edit" />} />
+          </Route>
+        </Route>
       </Routes>
     </>
   );
