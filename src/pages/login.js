@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../css/pages/login.css";
 import { login } from "../api/auth";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
   const [studentId, setStudentId] = useState("");
