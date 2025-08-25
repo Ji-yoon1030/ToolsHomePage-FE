@@ -1,12 +1,14 @@
 import React from "react";
 import { Route, BrowserRouter, Routes, useLocation } from "react-router-dom";
 
+
 import MainPage from "./pages/main";
 import Navbar from "./component/Navbar";
 import SignUp from "./pages/signup";
 import Login from "./pages/login";
 import ProfilePage from "./pages/profile";
 import NotificationBoard from "./pages/notification";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import AdminLayout from "./pages/admin/AdminLayout";
 import GuardedRoute from "./pages/admin/_components/GuardedRoute";
